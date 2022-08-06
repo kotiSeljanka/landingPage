@@ -5,6 +5,7 @@
 
 /*/// GENERAL ///*/
 body, h3, p         { margin: 0; padding: 0; }
+html                { scroll-behavior: smooth; }
 a                   { text-decoration: none; color: black; }
 ul                  { list-style: none; display: flex; }
 img                 { width: 100%; }
@@ -15,6 +16,19 @@ img                 { width: 100%; }
     --fw-light: 100;
 }
 
+.toTop {
+    position: fixed;
+    right: 6vw;
+    bottom: 5vh;
+    background-color: #00000010;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: .5vh;
+    border-radius: 50%;
+    z-index: 100;
+    
+}
 
 /*/// NAVIGARTION BAR ///*/
 nav svg { width: 130px;}
@@ -75,6 +89,9 @@ nav ul {
     --fs-intro-greeting: 18px;
     --fs-intro-heading: 40px;
     --fs-intro-description: 20px;
+}
+.intro a {
+    color: white;
 }
 .greeting { padding-bottom: 2vh; }
 .greeting >* { padding-bottom: 1vh; font-size: var(--fs-intro-greeting);}
@@ -225,8 +242,8 @@ footer {
 
     align-items: center;
 }
+#browse a       { color: #B1B1B1; display: block; }
 footer p        { color: #B1B1B1; }
-.reference p    { color: #B1B1B160; font-size: 15px; }
 footer svg      { width: 100vw; }
 footer .kotiSeljanka { font-weight: 900; }
 .footerList { padding: .5rem; text-align: center; }
@@ -240,4 +257,13 @@ footer .reference {
     padding: 1rem;
     border-top: 2px solid #2D2D2D;
 }
+.reference p    { color: #B1B1B160; font-size: 15px; }
+.reference a    { color: #B1B1B160; }
 
+
+/*/// ERROR PAGE ///*/
+.errorMessage {
+    height: 100vh;
+    text-align: center;
+    padding-top: 20vh;
+}
