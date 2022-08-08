@@ -19,14 +19,24 @@ img                 { width: 100%; }
 .toTop {
     position: fixed;
     right: 6vw;
-    bottom: 5vh;
+    bottom: 15vh;
+
     background-color: #00000010;
     width: 30px;
     height: 30px;
-    text-align: center;
-    padding-top: .5vh;
-    border-radius: 50%;
+    border-radius: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 100;
+
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+.toTop svg {
+    height: 20px;
+    width: 20px;
 }
 
 /*/// NAVIGARTION BAR ///*/
@@ -36,7 +46,8 @@ nav {
     justify-content: space-between;
     box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.1);
     align-items: center;
-    height: 65px;
+    height: 20px;
+    visibility: hidden;
 }
 nav ul {
     padding: 0;
@@ -45,6 +56,21 @@ nav ul {
     gap: .8rem;
     font-size: 15px;
 }
+.navMobile {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #121212;
+    color: white;
+    padding: .5rem;
+    z-index: 100;
+}
+.navMobile a    { color: white; }
+.navMobile svg  { height: 3rem; width: 3rem; }
+.navMobileElem  { text-align: center; }
 
 
 /*/// LANDING ///*/
@@ -52,8 +78,9 @@ nav ul {
 .scribble       { 
     text-decoration: line-through; 
     padding-top: 2vh; 
-    font-size: 20px; 
-    color: #00000010
+    font-size: 40px; 
+    color: #00000008;
+    cursor: default;
 }
 .scribble >*    { padding-bottom: 3px;}
 .statement      {
@@ -75,6 +102,15 @@ nav ul {
     left: 15vw;
     bottom: 4vh;
     font-size: 25px;
+    animation: jumpin 3s ease-in-out infinite;
+}
+@keyframes jumpin {
+    70% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 
@@ -111,13 +147,15 @@ nav ul {
 }
 .cardButton {
     background-color: #AD0000;
-    width: max-content;
+    width: 40vw;
+    height: 5vh;
     padding: 0.5rem;
     border-radius: 5px;
     margin: auto;
     display: flex;
     gap: 3vw;
     align-items: center;
+    justify-content: center;
     font-weight: var(--fw-bold);
 }
 .cardButton svg { width: 20px; height: 30px; }
@@ -145,9 +183,9 @@ nav ul {
     width: calc(100% - 2vh);
     font-weight: 100;
     align-items: center;
-    
+    height: 4rem;
 }
-.skill :first-child { padding-right: 10px; }
+.skill :first-child { padding-right: 10px; text-align: center; }
 .skill :last-child {
     text-align: end;
     font-weight: 900;
@@ -220,12 +258,12 @@ nav ul {
 #design         { top: 49vh; left: 15vw; }
 #game           { top: 56vh; left: 24vw; }
 
-#dancingSVG     { top: 70vh; left: 24vw; width: 75vw; }
-#guitar         { top: 77vh; left: 10vw; }
-#dancing        { top: 86vh; left: 1vw; }
-#singing        { top: 96vh; left: 8vw; }
+#dancingSVG     { top: 70vh; left: -5rem; width: 90vw; animation: jiggle 2s ease infinite; }
+#guitar         { top: 77vh; left: 60vw; }
+#dancing        { top: 86vh; left: 65vw; }
+#singing        { top: 96vh; left: 55vw; }
 
-#meditatingSVG  { right: 0; bottom: 15vh; width: 60vw; }
+#meditatingSVG  { right: 0; bottom: 15vh; width: 60vw; animation: meditate 10s ease infinite;}
 #selfImprovement{ top: 105vh; right: 3vw; }
 #education      { top: 115vh; right: 55vw; }
 #career         { top: 125vh; right: 60vw; }
@@ -233,6 +271,21 @@ nav ul {
 #chillSVG       { bottom: -3vh;  width: 35vw;}
 #chill          { bottom: 3vh; left: 35vw; }
 
+@keyframes jiggle {
+    50% {
+        left: -4rem
+    }
+    100% {
+        left: -5rem;
+    }
+}
+@keyframes meditate {
+    30%     { bottom: 17vh; }
+    50%     { bottom: 16vh; }
+    60%     { bottom: 18vh; }
+    100%    { bottom: 15vh; }
+    
+}
 
 /*/// FOOTER ///*/
 footer {
@@ -241,11 +294,12 @@ footer {
 
     align-items: center;
 }
-#browse a       { color: #B1B1B1; display: block; }
+#browse a       { color: #B1B1B1; display: block; padding-bottom: .3rem;}
 footer p        { color: #B1B1B1; }
 footer svg      { width: 100vw; }
-footer .kotiSeljanka { font-weight: 900; }
-.footerList { padding: .5rem; text-align: center; }
+footer .kotiSeljanka { font-weight: 900; padding-bottom: .5rem;}
+#follow a { margin-right: .2rem;}
+.footerList { padding: .5rem; text-align: start; padding-left: 2rem;}
 .footerList h3 { padding-bottom: 1vh; }
 footer #follow svg {
     width: 30px;
@@ -255,6 +309,7 @@ footer .reference {
     grid-area: refer;
     padding: 1rem;
     border-top: 2px solid #2D2D2D;
+    padding-bottom: 6rem;
 }
 .reference p    { color: #B1B1B160; font-size: 15px; }
 .reference a    { color: #B1B1B160; }
@@ -265,4 +320,14 @@ footer .reference {
     height: 100vh;
     text-align: center;
     padding-top: 20vh;
+}
+
+@media (min-width: 600px) {
+    .navMobile {
+        display: none;
+    }
+    nav {
+        visibility: unset;
+        height: 65px;
+    }
 }
