@@ -1,0 +1,11 @@
+.contactForm { 
+    height: 100vh;
+    padding-top: 5vh;
+}
+.contactForm >* { margin-bottom: 2vh; }
+.contactForm form >* {
+    display: block;
+    margin-bottom: .2rem;
+}
+.contactForm h3 { font-size: 2rem;}
+label { font-weight: 700;}

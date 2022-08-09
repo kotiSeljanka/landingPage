@@ -1,0 +1,25 @@
+{
+  "name": "out",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotiSeljanka/out.git"
+  },
+  "keywords": [
+    "web",
+    "js",
+    "css",
+    "design"
+  ],
+  "author": "kotiSeljanka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kotiSeljanka/out/issues"
+  },
+  "homepage": "https://github.com/kotiSeljanka/out#readme"
+}
