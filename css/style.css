@@ -31,7 +31,7 @@ img                 { width: 100%; }
     align-items: center;
     z-index: 100;
 
-    opacity: 1;
+    opacity: 0;
     transition: opacity .2s ease;
 }
 .toTop svg {
@@ -40,13 +40,22 @@ img                 { width: 100%; }
 }
 
 /*/// NAVIGARTION BAR ///*/
+.menuButton { display: none; }
+.menuButton svg { height: 1.5rem; width: 1.5rem;}
+.padMenuArrow { 
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left .5s ease;
+ }
+.padMenuArrow svg { height: 3rem; width: 3rem; }
 nav svg { width: 130px;}
 nav {
     display: flex;
     justify-content: space-between;
     box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.1);
     align-items: center;
-    height: 20px;
+    height: 0px;
     visibility: hidden;
 }
 nav ul {
@@ -73,6 +82,8 @@ nav ul {
     font-size: .8rem;
     font-weight: var(--fw-light);
     --ht-svg: 1.2rem;
+
+    transition: left .5s ease;
 }
 .navMobile a    { color: white; }
 .navMobile svg  { height: var(--ht-svg); width: var(--ht-svg); }
@@ -174,6 +185,7 @@ nav ul {
 .aboutMeAboutMe p   { padding-left: 2vw;}
 .skillsList         { padding-left: 2vw; margin-bottom: 5vh;}
 .skillsList h3      { font-size: 20px; }
+.skills .subHeading { padding-top: .5rem;}
 .skills h3          { padding-bottom: 1vh; }
 .skill { 
     background-color: #A51212;
@@ -320,7 +332,7 @@ footer #follow svg {
     fill: #B1B1B1;
 }
 #follow a               { margin-right: .2rem;}
-.footerList             { padding: .5rem; text-align: start; padding-left: 2rem;}
+.footerList             { padding: .5rem; text-align: start; }
 .footerList h3          { padding-bottom: 1vh; }
 
 .reference p    { color: #B1B1B160; font-size: 15px; }
@@ -334,12 +346,191 @@ footer #follow svg {
     padding-top: 20vh;
 }
 
+
+/*/// PAD VIEW ///*/
 @media (min-width: 600px) {
     .navMobile {
-        display: none;
+        grid-template-columns: auto;
+        align-items: center;
+    
+        right: unset;
+        top: 0;
+        left: -5rem;
     }
-    nav {
-        visibility: unset;
-        height: 65px;
+    .padVisible { left: 0; }
+    .menuButton { 
+        display: block;
+        position: fixed;
+        left: 2rem;
+        top: 2rem;
+        color: black;
+        z-index: 100;
     }
+    .padMenuArrow { 
+        display: block;
+        position: fixed;
+
+        left: -5rem;
+        z-index: 100;
+    }
+    .padArrowVisible { left: 4.5rem; }
+    footer .reference { padding-bottom: 1rem; }
+    .lists { display: flex;  justify-content: flex-start;  gap: 7rem; padding-left: .5rem; }
+
+    /*/// PAD LANDING ///*/
+    .gag            { height: 95vh; }
+    .scribble >*    { padding-bottom: 1px;}
+    .statement      { left: 3rem; top: 8rem; }
+    #iceCream       { bottom: -5rem; left: 30vw; }
+
+
+    /*/// PAD INTRODUCTION ///*/
+    .intro { padding-bottom: 13rem;}
+    .card {
+        width: 45vw;
+        padding-bottom: 1.5rem;
+        margin: 0 auto -10rem 2rem;
+    }
+    .card:nth-child(2) {
+        margin-left: 50%;
+        background-color: #171717;
+    }
+    
+
+    /*/// PAD ABOUT ME ///*/
+    .aboutMeAboutMe >*  { margin-bottom: .5rem; }
+    .skillsList         { padding-left: 2vw; display: grid; grid-template-columns: 1fr 1fr;}
+    .skill              { width: calc(100% - .5rem); }
+
+    /*/// PAD MY WORK ///*/
+    .innerContainer img { position: absolute; height: auto; width: auto; max-width: 100%; }
+
+
+    /*/// PAD BRIGHT FUTURE ///*/
+    .brightFuture   { height: 185vh; }
+
+    #brightFuture   { top: 65vh; }
+
+    #dogGIF         { display: block; width: 35vw; }
+    #family         { top: 15vh; left: 35vw; }
+    #love           { top: 28vh; left: 38vw; }
+    #friends        { top: 43vh; left: 32vw; }
+    #dogs           { top: 54vh; left: 15vw; }
+
+    #coffeeGIF      { right: 0; transform: translateX(15vw); top: 30vh; width: 40vw;}
+    #programming    { top: 20vh; left: 70vw; }
+    #web            { top: 32vh; left: 58vw; }
+    #design         { top: 46vh; left: 55vw; }
+    #game           { top: 58vh; left: 60vw; }
+
+    #dancingSVG     { top: 75vh; left: -5rem; width: 60vw; }
+    #guitar         { top: 85vh; left: 50vw; }
+    #dancing        { top: 100vh; left: 55vw; }
+    #singing        { top: 115vh; left: 45vw; }
+
+    #meditatingSVG  { right: 0; bottom: 15vh; width: 25vw;}
+    #selfImprovement{ top: 125vh; right: 3vw; }
+    #education      { top: 140vh; right: 25vw; }
+    #career         { top: 155vh; right: 30vw; }
+
+    #chillSVG       { bottom: -2rem;  width: 30vw;}
+    #chill          { bottom: 3vh; left: 13rem; }
+
+    /*/// PAD FOOTER ///*/
+    footer .logo svg        { padding-bottom: 1rem;}
+}
+
+/*/// DESKTOP VIEW ///*/
+@media (min-width: 800px) {
+    /*/// DESKTOP NAVIGARTION BAR ///*/
+    .menuButton     { display: none; }
+    .padMenuArrow   { display: none; }
+    nav svg         { width: 200px;}
+    nav             { height: 90px; visibility: unset; }
+    nav ul          { gap: 1.5rem; font-size: 22px; }
+    .navMobile      { display: none; }
+
+
+    /*/// DESKTOP LANDING ///*/
+    .gag            { position: relative; height: 85vh; overflow: hidden;}
+    .scribble >*    { padding-bottom: 3px;}
+    .statement      {
+        font-size: 5rem;
+        top: 38vh;
+        z-index: 1;
+    }
+    .statement :first-child { height: 20px; }
+    .statement :last-child { font-size: 12rem; }
+    #iceCream       { bottom: -3rem; }
+
+
+    /*/// DESKTOP INTRODUCTION ///*/
+    .intro { padding-bottom: 4rem;}
+    .cards { display: flex; height: max-content;}
+    .card:nth-child(2) { margin-left: unset; background-color: #121212;}
+    .card   { margin: 0 .5rem; width: unset; }
+
+
+    /*/// DESKTOP ABOUT ME ///*/
+    .aboutMeAboutMe >*  { margin-bottom: .2rem; }
+    .skills             { display: grid; grid-template-columns: auto auto auto; }
+    .skills h3          { font-size: 1.5rem; margin-top: 0;}
+    .skills.subHeading { margin-top: 0;}
+    .skillsList         { padding-left: 2vw; display: flex; flex-direction: column; }
+    .skill              { width: calc(100% - .5rem); }
+
+
+    /*/// DESKTOP MY WORK ///*/
+    .innerContainer img { position: absolute; height: auto; width: auto; min-width: 100%;}
+
+
+    /*/// BRIGHT FUTURE ///*/
+    .brightFuture       { height: 150vh; }
+    .brightFuture >* { position: absolute; font-size: 2.5rem;}
+    .brightFuture img { width: 40vw; }
+
+    #brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 4rem;}
+
+    #dogGIF         { display: block; width: 20rem; }
+    #family         { top: 4rem; left: 20rem; }
+    #dogs           { top: 9rem; left: 22rem; }
+    #love           { top: 14rem; left: 18rem; }
+    #friends        { top: 18rem; left: 10rem; }
+
+    #coffeeGIF      { right: 0; transform: translateX(15vw); top: 30vh; width: 20rem;}
+    #programming    { top: 12rem; left: 38rem; }
+    #web            { top: 18rem; left: 33rem; }
+    #design         { top: 25rem; left: 35rem; }
+    #game           { top: 30rem; left: 44rem; }
+
+    #dancingSVG     { top: 70vh; left: -5rem; width: 40rem; }
+    #guitar         { top: 37rem; left: 35rem; }
+    #dancing        { top: 41rem; left: 40rem; }
+    #singing        { top: 45rem; left: 37rem; }
+
+    #meditatingSVG  { right: 0; bottom: 3rem; width: 15rem; animation: meditate 10s ease infinite;}
+    #selfImprovement{ top: 52rem; right: 2rem; }
+    #education      { top: 57rem; right: 16rem; }
+    #career         { top: 62rem; right: 18rem; }
+
+    #chillSVG       { bottom: -2rem;  width: 15rem;}
+    #chill          { bottom: 3vh; left: 16rem; }
+
+    @keyframes jiggle {
+        50% {
+            left: -4rem
+        }
+        100% {
+            left: -5rem;
+        }
+    }
+    @keyframes meditate {
+        30%     { bottom: 5rem; }
+        50%     { bottom: 4rem; }
+        60%     { bottom: 6rem; }
+        100%    { bottom: 3rem; }
+        
+    }
+
+    /*/// FOOTER ///*/
 }
