@@ -38,7 +38,8 @@ img                 { width: 100%; }
     height: 20px;
     width: 20px;
 }
-.contactForm { padding: 6rem 10rem;}
+.contactForm { padding: 2rem;} 
+
 /*/// NAVIGARTION BAR ///*/
 .menuButton { display: none; }
 .menuButton svg { height: 1.5rem; width: 1.5rem;}
@@ -65,6 +66,7 @@ nav ul {
     gap: .8rem;
     font-size: 15px;
     padding-right: 1rem;
+    display: none;
 }
 .navMobile {
     display: grid;
@@ -227,7 +229,7 @@ nav ul {
 .myWorkCard {
     background-color: white;
     position: relative;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 .innerContainer { position: relative; height: 10rem; overflow: hidden; }
 .innerContainer h3 { 
@@ -268,50 +270,45 @@ nav ul {
     position: relative;
     height: 150vh;
     overflow: hidden;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
-.brightFuture >* { position: absolute; }
-.brightFuture img { width: 40vw; }
+.brightFuture >* { position: absolute; white-space: nowrap; }
 
 #brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 3rem;}
 
-#dogGIF         { display: block; width: 21rem; }
-#family         { top: 2rem; left: 18rem; }
-#dogs           { top: 6rem; left: 20rem; }
-#love           { top: 10rem; left: 21rem; }
-#friends        { top: 14rem; left: 19rem; }
+#dogGIF         { display: block; width: 13rem; }
+#family         { top: 2rem; left: 12rem; }
+#friends        { top: 5rem; left: 14rem; }
+#love           { top: 8rem; left: 13rem; }
+#dogs           { top: 11rem; left: 8rem; }
 
-#coffeeGIF      { right: 0; transform: translateX(15vw); top: 30vh; width: 25rem;}
-#programming    { top: 20rem; right: 17rem; }
-#web            { top: 24rem; right: 21rem; }
-#design         { top: 29rem; right: 20rem; }
-#game           { top: 33rem; right: 15rem; }
+#coffeeGIF      { right: -6rem; top: 18rem; width: 15rem;}
+#design         { top: 15rem; right: 6rem; }
+#web            { top: 18rem; right: 10rem; }
+#programming    { top: 21rem; right: 10rem; }
+#game           { top: 24rem; right: 9rem; }
 
-#dancingSVG     { top: 40rem; left: -5rem; width: 30rem; animation: jiggle 2s ease infinite; }
-#guitar         { top: 45rem; left: 21rem; }
-#dancing        { top: 50rem; left: 20rem; }
-#singing        { top: 55rem; left: 18rem; }
+#dancingSVG     { top: 29rem; left: -8rem; width: 22rem; animation: jiggle 2s ease infinite; }
+#guitar         { top: 31rem; left: 13rem; }
+#dancing        { top: 35rem; left: 14rem; }
+#singing        { top: 39rem; left: 12rem; }
 
-#meditatingSVG  { right: 0; bottom: 5rem; width: 20rem; animation: meditate 10s ease infinite;}
-#selfImprovement{ top: 63rem; right: 5rem; }
-#education      { top: 68rem; right: 17rem }
-#career         { top: 74rem; right: 20rem }
+#meditatingSVG  { right: 0; bottom: 5rem; width: 12rem; animation: meditate 10s ease infinite;}
+#selfImprovement{ top: 46rem; right: 2rem; }
+#education      { top: 50rem; right: 12rem }
+#career         { top: 54rem; right: 11rem }
 
-#chillSVG       { bottom: -1.5rem;  width: 10rem;}
-#chill          { bottom: 1.5rem; left: 11rem; }
+#chillSVG       { bottom: -1rem;  width: 7rem;}
+#chill          { bottom: .5rem; left: 7rem; }
 
 @keyframes jiggle {
-    50% {
-        left: -4rem
-    }
-    100% {
-        left: -5rem;
-    }
+    50%     { left: -7rem }
+    100%    { left: -8rem; }
 }
 @keyframes meditate {
-    30%     { bottom: 8rem; }
-    50%     { bottom: 9rem; }
-    60%     { bottom: 10rem; }
+    30%     { bottom: 6rem; }
+    50%     { bottom: 5.5rem; }
+    60%     { bottom: 6.5rem; }
     100%    { bottom: 5rem; }
     
 }
@@ -359,19 +356,22 @@ footer #follow svg {
     gap: 2rem;
     padding: 4rem 2rem;
 }
-.letter h3 { font-size: 4rem;}
-.letter p { font-size: 2rem; padding-top: 1rem;}
-.letter img { width: auto; height: auto; max-width: 25rem; }
+.letter h3  { font-size: 2rem; }
+.letter p   { font-size: 1.2rem; padding-top: 1rem;}
+.letter img { width: auto; height: auto; max-width: 18rem; }
 
 /*/// PAD VIEW ///*/
 @media (min-width: 600px) {
+    .letter img { max-width: 25rem; }
     .navMobile {
         grid-template-columns: auto;
+        grid-template-rows: 6rem 6rem 6rem 6rem;
         align-items: center;
     
         right: unset;
         top: 0;
         left: -5rem;
+        --ht-svg: 2rem;
     }
     .padVisible { left: 0; }
     .menuButton { 
@@ -397,7 +397,7 @@ footer #follow svg {
     .gag            { height: 95vh; }
     .scribble >*    { padding-bottom: 1px;}
     .statement      { left: 3rem; top: 8rem; }
-    #iceCream       { bottom: -5rem; left: 30vw; }
+    #iceCream       { bottom: -5rem; left: 0vw; width: 80rem; }
 
 
     /*/// PAD INTRODUCTION ///*/
@@ -423,23 +423,23 @@ footer #follow svg {
 
 
     /*/// PAD BRIGHT FUTURE ///*/
-    .brightFuture   { height: 155vh; font-size: 2.7rem;}
+    .brightFuture   { font-size: 3rem; height: 120vh; padding: 1rem;}
 
-    #brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 5rem;}
+    #brightFuture   { right: 0; left: 0; text-align: center; top: 52vh; font-size: 5rem;}
 
-    #dogGIF         { display: block; width: 21rem; }
-    #family         { top: 2rem; left: 20rem; }
-    #dogs           { top: 6rem; left: 22rem; }
-    #love           { top: 10rem; left: 21rem; }
-    #friends        { top: 14rem; left: 19rem; }
+    #dogGIF         { width: 21rem; }
+    #family         { top: 2rem; left: 24rem; width: 2rem;}
+    #dogs           { top: 6rem; left: 28rem; }
+    #love           { top: 10rem; left: 27rem; }
+    #friends        { top: 14rem; left: 22rem; }
 
-    #coffeeGIF      { right: 0; transform: translateX(15vw); top: 30vh; width: 25rem;}
+    #coffeeGIF      { right: -5rem; top: 30vh; width: 25rem;}
     #programming    { top: 20rem; right: 17rem; }
-    #web            { top: 24rem; right: 22rem; }
-    #design         { top: 28rem; right: 21rem; }
-    #game           { top: 33rem; right: 15rem; }
+    #web            { top: 24rem; right: 30rem; }
+    #design         { top: 28rem; right: 32rem; }
+    #game           { top: 33rem; right: 26rem; }
 
-    #dancingSVG     { top: 40rem; left: -5rem; width: 30rem; animation: jiggle 2s ease infinite; }
+    #dancingSVG     { top: 42rem; left: -5rem; width: 33rem; animation: jiggle 2s ease infinite; }
     #guitar         { top: 45rem; left: 25rem; }
     #dancing        { top: 50rem; left: 27rem; }
     #singing        { top: 55rem; left: 23rem; }
@@ -452,19 +452,32 @@ footer #follow svg {
     #chillSVG       { bottom: -1.5rem;  width: 10rem;}
     #chill          { bottom: 1.5rem; left: 11rem; }
 
+    @keyframes jiggle {
+        50%     { left: -6rem }
+        100%    { left: -5rem; }
+    }
+    @keyframes meditate {
+        30%     { bottom: 6rem; }
+        50%     { bottom: 5.5rem; }
+        60%     { bottom: 6.5rem; }
+        100%    { bottom: 5rem; }
+        
+    }
+
     /*/// PAD FOOTER ///*/
     footer .logo svg        { padding-bottom: 1rem;}
 }
 
 /*/// DESKTOP VIEW ///*/
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
     /*/// DESKTOP NAVIGARTION BAR ///*/
     .menuButton     { display: none; }
     .padMenuArrow   { display: none; }
     nav svg         { width: 200px;}
     nav             { height: 90px; visibility: unset; }
-    nav ul          { gap: 1.5rem; font-size: 22px; }
+    nav ul          { gap: 1.5rem; font-size: 22px; display: flex;}
     .navMobile      { display: none; }
+    .contactForm    { padding: 6rem 10rem;} 
 
 
     /*/// DESKTOP LANDING ///*/
@@ -477,7 +490,7 @@ footer #follow svg {
     }
     .statement :first-child { height: 20px; }
     .statement :last-child { font-size: 12rem; }
-    #iceCream       { bottom: -3rem; }
+    #iceCream       { bottom: -3rem; left: 25rem; }
 
 
     /*/// DESKTOP INTRODUCTION ///*/
@@ -495,46 +508,49 @@ footer #follow svg {
     .skills h3          { font-size: 1.5rem; margin-top: 0;}
     .skillsList         { padding-left: 2vw; display: flex; flex-direction: column; }
     .skill              { width: calc(100% - .5rem); }
-    .skills .subHeading{ padding-top: 0;}
+    .skills .subHeading { padding-top: 0;}
 
 
     /*/// DESKTOP MY WORK ///*/
-    .myWork { padding: 4rem 5rem; }
-    .myWorkCardContainer { gap: 2rem; }
-    .innerContainer img { position: absolute; height: auto; width: auto; min-width: 100%;}
+    .myWork                 { padding: 4rem 15rem; }
+    .myWorkCardContainer    { gap: 1rem; }
+    .myWorkCard             { padding-bottom: 3rem;}
+    .workCardRest           { padding: 1rem; }
+    .tags                   { padding-left: .5rem;}
+    .innerContainer img     { position: absolute; height: auto; width: auto; min-width: 100%;}
 
 
     /*/// BRIGHT FUTURE ///*/
     .brightFuture img { width: 40vw; }
 
-    .brightFuture   { height: 150vh; font-size: 3.1rem;}
+    .brightFuture   { height: 150vh; font-size: 4rem; padding: 0 5rem;}
 
-    #brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 5rem;}
+    #brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 7rem;}
 
-    #dogGIF         { display: block; width: 21rem; }
-    #family         { top: 2rem; left: 20rem; }
-    #dogs           { top: 7rem; left: 24rem; }
-    #love           { top: 12rem; left: 22rem; }
-    #friends        { top: 16rem; left: 15rem; }
+    #dogGIF         { width: 30rem; }
+    #family         { top: 3rem; left: 32rem; }
+    #dogs           { top: 10rem; left: 35rem; }
+    #love           { top: 17rem; left: 34rem; }
+    #friends        { top: 24rem; left: 20rem; }
 
     #coffeeGIF      { right: -8rem; transform: unset; top: 30vh; width: 25rem;}
-    #programming    { top: 15rem; right: 4rem; }
-    #web            { top: 22rem; right: 24rem; }
-    #design         { top: 28rem; right: 24rem; }
+    #programming    { top: 14rem; right: 4rem; }
+    #web            { top: 20rem; right: 24rem; }
+    #design         { top: 27rem; right: 24rem; }
     #game           { top: 34rem; right: 15rem; }
 
-    #dancingSVG     { top: 42rem; left: -5rem; width: 30rem; animation: jiggle 2s ease infinite; }
-    #guitar         { top: 45rem; left: 28rem; }
-    #dancing        { top: 51rem; left: 32rem; }
-    #singing        { top: 57rem; left: 23rem; }
+    #dancingSVG     { top: 42rem; left: -5rem; width: 50rem; animation: jiggle 2s ease infinite; }
+    #guitar         { top: 48rem; left: 42rem; }
+    #dancing        { top: 54rem; left: 45rem; }
+    #singing        { top: 60rem; left: 37rem; }
 
     #meditatingSVG  { right: 0; bottom: 5rem; width: 20rem; animation: meditate 10s ease infinite;}
-    #selfImprovement{ top: 65rem; right: 4rem; }
+    #selfImprovement{ top: 64rem; right: 4rem; }
     #education      { top: 71rem; right: 25rem }
     #career         { top: 77rem; right: 26rem }
 
-    #chillSVG       { bottom: -1.5rem;  width: 10rem;}
-    #chill          { bottom: 1.5rem; left: 11rem; }
+    #chillSVG       { bottom: -1.5rem;  width: 12rem;}
+    #chill          { bottom: 1.5rem; left: 18rem; }
 
     @keyframes jiggle {
         50% {

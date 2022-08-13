@@ -7,12 +7,11 @@ body {
     padding: 0;
     background: linear-gradient(60deg, red, gold) fixed;
 }
-
 .containerMain {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 2rem;
+    padding-top: .5rem;
     padding-bottom: 3rem;
     min-height: 100vh;
 }
@@ -35,7 +34,7 @@ body {
 }
 .inputField {
     font-size: 50px;
-    max-width: 2em;
+    max-width: 5rem;
     font-weight: bold;
     text-align: center;
 }
@@ -72,21 +71,13 @@ body {
     font-weight: bold;
     font-size: 3em;
 }
-
 @keyframes tileAppearing {
-    0% {
-        opacity: 0;
-        height: 0;
-    }
-    5% {
-        height: max-content;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; height: 0; }
+    5% { height: max-content; }
+    100% { opacity: 1; }
 }
 
-/* /// ENDING SCREEN /// */
+/*/// ENDING SCREEN ///*/
 
 /* Container for ending screen elements. Gets visible when all of the three dish-inputs are locked. */
 .winnerScreen {
@@ -106,7 +97,6 @@ body {
     top: -100vh;
     transition: transform 1s ease-in-out;
 }
-
 /* 
 Class set on the ending screen container when all of the three dish-inputs are locked. 
 Brings the ending screen to the page. 
@@ -114,7 +104,6 @@ Brings the ending screen to the page.
 .screenVisible {
     transform: translateY(100vh);
 }
-
 /* Container for the button that closes the ending screen. */
 .closeScreen {
     width: var(--button-pixels-double);
@@ -128,25 +117,37 @@ Brings the ending screen to the page.
 }
 
 
-/* ENDING SCREEN: TEXT */
+/*/// ENDING SCREEN: TEXT ///*/
 
 /* Styling for the text on the top of the ending screen. */
 .congratulationText {
     margin-top: 30vh;
     font-size: 3vh;
 }
-
 /* Styling for the text in the middle of the ending screen. */
 .dishResult {
     margin-top: 2vh;
     font-size: 7vh;
     font-weight: 600;
 }
-
 /* Styling for the text on the bottom of the ending screen. */
 .haveANiceMeal {
     font-size: 4vh;
     margin-top: 10px;
 }
 
-h3:not(:first-child) { font-size: 5rem; text-align: center; padding-top: 4rem;}
+
+/*/// SOME ///*/
+h3:not(:first-child) { 
+    font-size: 2rem; 
+    text-align: center; 
+    padding-top: 2rem; 
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/*/// DESKTOP VIEW ///*/
+@media (min-width: 800px) {
+    h3:not(:first-child) { font-size: 4rem; padding-top: 4rem; }
+
+}
