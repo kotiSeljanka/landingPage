@@ -268,13 +268,13 @@ nav ul {
 /*/// BRIGHT FUTURE ///*/
 .brightFuture {
     position: relative;
-    height: 150vh;
+    height: 63rem;
     overflow: hidden;
     font-size: 2rem;
 }
 .brightFuture >* { position: absolute; white-space: nowrap; }
 
-#brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 3rem;}
+#brightFuture   { right: 0; left: 0; text-align: center; top: 27rem; font-size: 3rem;}
 
 #dogGIF         { display: block; width: 13rem; }
 #family         { top: 2rem; left: 12rem; }
@@ -423,9 +423,9 @@ footer #follow svg {
 
 
     /*/// PAD BRIGHT FUTURE ///*/
-    .brightFuture   { font-size: 3rem; height: 120vh; padding: 1rem;}
+    .brightFuture   { font-size: 3rem; height: 90rem; padding: 1rem;}
 
-    #brightFuture   { right: 0; left: 0; text-align: center; top: 52vh; font-size: 5rem;}
+    #brightFuture   { right: 0; left: 0; text-align: center; top: 38rem; font-size: 6rem;}
 
     #dogGIF         { width: 21rem; }
     #family         { top: 2rem; left: 24rem; width: 2rem;}
@@ -433,7 +433,7 @@ footer #follow svg {
     #love           { top: 10rem; left: 27rem; }
     #friends        { top: 14rem; left: 22rem; }
 
-    #coffeeGIF      { right: -5rem; top: 30vh; width: 25rem;}
+    #coffeeGIF      { right: -5rem; top: 22rem; width: 25rem;}
     #programming    { top: 20rem; right: 17rem; }
     #web            { top: 24rem; right: 30rem; }
     #design         { top: 28rem; right: 32rem; }
@@ -520,12 +520,12 @@ footer #follow svg {
     .innerContainer img     { position: absolute; height: auto; width: auto; min-width: 100%;}
 
 
-    /*/// BRIGHT FUTURE ///*/
-    .brightFuture img { width: 40vw; }
+    /*/// DESKTOP BRIGHT FUTURE ///*/
+    .brightFuture img { width: 70rem; }
 
-    .brightFuture   { height: 150vh; font-size: 4rem; padding: 0 5rem;}
+    .brightFuture   { height: 95rem; font-size: 4rem; padding: 0 5rem;}
 
-    #brightFuture   { right: 0; left: 0; text-align: center; top: 65vh; font-size: 7rem;}
+    #brightFuture   { right: 0; left: 0; top: 38rem; font-size: 7rem;}
 
     #dogGIF         { width: 30rem; }
     #family         { top: 3rem; left: 32rem; }
@@ -533,7 +533,7 @@ footer #follow svg {
     #love           { top: 17rem; left: 34rem; }
     #friends        { top: 24rem; left: 20rem; }
 
-    #coffeeGIF      { right: -8rem; transform: unset; top: 30vh; width: 25rem;}
+    #coffeeGIF      { right: -8rem; top: 20rem; width: 25rem;}
     #programming    { top: 14rem; right: 4rem; }
     #web            { top: 20rem; right: 24rem; }
     #design         { top: 27rem; right: 24rem; }
