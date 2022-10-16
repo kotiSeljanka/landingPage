@@ -70,7 +70,7 @@ nav ul {
 }
 .navMobile {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     position: fixed;
     z-index: 100;
 
@@ -365,7 +365,7 @@ footer #follow svg {
     .letter img { max-width: 25rem; }
     .navMobile {
         grid-template-columns: auto;
-        grid-template-rows: 6rem 6rem 6rem 6rem;
+        grid-template-rows: 6rem 6rem 6rem 6rem 6rem;
         align-items: center;
     
         right: unset;
